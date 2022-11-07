@@ -1,0 +1,10 @@
+<form method="POST" action="/score">
+    <label for="SID">SID&nbsp;</label><input type="text" name="SID">
+    <button type="submit">Submit</button>
+</form>
+{% if hasScore %}
+<p>{{SID}}</p>
+{% for course in rows %}
+<p>{{course[1]}}&nbsp;MidScore:{{course[2]}}&nbsp;FinalScore:{{course[3]}}&nbsp;Score:{{course[4]}}</p>
+{% endfor %}
+{% endif %}
